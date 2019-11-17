@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-const Games = ()=> {
+const Games = () => {
   useEffect(() => {
     fetchItems();
   }, []);
@@ -25,9 +26,11 @@ const Games = ()=> {
     <div className="games">
       Games
       {items.map(item => (
-        <div key={item.id}>
-          <h3>{item.name}</h3>
-        </div>
+        <Link to={`games/${item.id}`}>
+          <div key={item.id}>
+            <h3>{item.name}</h3>
+          </div>
+        </Link>
       ))}
     </div>
   );
