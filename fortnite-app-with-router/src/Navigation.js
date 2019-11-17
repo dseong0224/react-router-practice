@@ -10,7 +10,7 @@ const Nav = ()=> {
 
   return (
     <nav>
-      <h3>Games</h3>
+      <h3>Must Games</h3>
       <ul className="nav-link">
         <Link to='/'>
           <li className="nav-style" style={noUnderline}>Home</li>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Game from './Game';
 
 const Games = () => {
   useEffect(() => {
@@ -23,16 +23,11 @@ const Games = () => {
   };
 
   return (
-    <div className="games">
-      Games
-      {items.map(item => (
-        <Link to={`games/${item.id}`}>
-          <div key={item.id}>
-            <h3>{item.name}</h3>
-          </div>
-        </Link>
-      ))}
+    <div className="container">
+      <h1>Games</h1>
+        <Game items={items} />
     </div>
+
   );
 }
 
